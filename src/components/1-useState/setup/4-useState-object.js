@@ -15,8 +15,6 @@ const UseStateObject = () => {
     setMessage("Code is fun");
   };
 
-  
-
   return (
     <>
       <h3>{name}</h3>
@@ -25,6 +23,7 @@ const UseStateObject = () => {
       <button className="btn" onClick={changeMessage}>
         Change Message
       </button>
+      <button className="btn">Change Name</button>
     </>
   );
 };
