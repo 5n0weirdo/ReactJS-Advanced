@@ -19,6 +19,10 @@ const UseStateObject = () => {
     setName("Gresh");
   };
 
+  const changeAge = () => {
+    setAge(24);
+  };
+
   return (
     <>
       <h3>{name}</h3>
@@ -30,7 +34,9 @@ const UseStateObject = () => {
       <button className="btn" onClick={changeName}>
         Change Name
       </button>
-      <button className="btn">Change Age</button>
+      <button className="btn" onClick={changeAge}>
+        Change Age
+      </button>
     </>
   );
 };
