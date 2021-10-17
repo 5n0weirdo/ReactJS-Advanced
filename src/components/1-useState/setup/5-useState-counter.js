@@ -6,6 +6,11 @@ const UseStateCounter = () => {
   const resetValue = () => {
     setValue(0);
   };
+
+  const complexIncrease = () => {
+    setTimeout(() => {}, 2000);
+  };
+
   return (
     <>
       <section style={{ margin: "4rem 0" }}>
@@ -24,14 +29,8 @@ const UseStateCounter = () => {
       <section style={{ margin: "4rem 0" }}>
         <h2>More complex counter</h2>
         <h1>{value}</h1>
-        <button className="btn" onClick={() => setValue(value - 1)}>
-          Decrease
-        </button>
-        <button className="btn" onClick={resetValue}>
-          Reset
-        </button>
-        <button className="btn" onClick={() => setValue(value + 1)}>
-          Increase
+        <button className="btn" onClick={complexIncrease}>
+          Increase later
         </button>
       </section>
     </>
