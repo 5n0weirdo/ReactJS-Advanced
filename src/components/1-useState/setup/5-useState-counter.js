@@ -8,7 +8,12 @@ const UseStateCounter = () => {
   };
 
   const complexIncrease = () => {
-    setTimeout(() => {}, 2000);
+    setTimeout(() => {
+      // setValue(value + 1);
+      setValue((prevValue) => {
+        return prevValue + 1;
+      });
+    }, 2000);
   };
 
   return (
