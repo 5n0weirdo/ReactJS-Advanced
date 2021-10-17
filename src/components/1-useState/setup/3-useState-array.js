@@ -6,7 +6,9 @@ import { data } from '../../../data';
 const UseStateArray = () => {
   const [people, setPeople] = useState(data)
 
-
+  const clickHandler = () => {
+    setPeople([])
+  }
 
   return (
     <>
@@ -19,6 +21,9 @@ const UseStateArray = () => {
           )
         })
       }
+      <button className="btn" onClick={clickHandler}>
+        Clear Items
+      </button>
     </>
   )
 
