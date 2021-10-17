@@ -21,6 +21,19 @@ const UseStateCounter = () => {
           Increase
         </button>
       </section>
+      <section style={{ margin: "4rem 0" }}>
+        <h2>More complex counter</h2>
+        <h1>{value}</h1>
+        <button className="btn" onClick={() => setValue(value - 1)}>
+          Decrease
+        </button>
+        <button className="btn" onClick={resetValue}>
+          Reset
+        </button>
+        <button className="btn" onClick={() => setValue(value + 1)}>
+          Increase
+        </button>
+      </section>
     </>
   );
 };
