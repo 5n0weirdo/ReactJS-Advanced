@@ -7,7 +7,11 @@ const UseStateArray = () => {
   const [people, setPeople] = useState(data)
 
   const clickHandler = () => {
-    setPeople([])
+    setPeople([]);
+  }
+  const removeItem = (id) => {
+    const newPeople = people.filter((person) => person.id !== id);
+    setPeople(newPeople);
   }
 
   return (
@@ -17,7 +21,7 @@ const UseStateArray = () => {
           const { id, name } = person
           return (<div key={id} className="item">
             <h4>{name}</h4>
-            <button >Remove</button>
+            <button onClick={() => removeItem(id)}>Remove</button>
           </div>
           )
         })
