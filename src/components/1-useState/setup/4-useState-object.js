@@ -30,6 +30,7 @@ const UseStateObject = () => {
       <button className="btn" onClick={changeName}>
         Change Name
       </button>
+      <button className="btn">Change Age</button>
     </>
   );
 };
