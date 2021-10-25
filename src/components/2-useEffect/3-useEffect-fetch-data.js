@@ -24,6 +24,7 @@ const UseEffectFetchData = () => {
           return (
             <li key={id}>
               <img src={avatar_url} alt={login} />
+              <h4>{login}</h4>
             </li>
           );
         })}
