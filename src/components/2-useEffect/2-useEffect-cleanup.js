@@ -4,7 +4,12 @@ import React, { useState, useEffect } from "react";
 // second argument
 
 const UseEffectCleanup = () => {
-  return <h2>useEffect cleanup</h2>;
+  const [size, setSize] = useState(window.innerWidth);
+  return (
+    <div>
+      <h1>Window</h1>
+    </div>
+  );
 };
 
 export default UseEffectCleanup;
