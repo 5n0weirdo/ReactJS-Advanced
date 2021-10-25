@@ -7,8 +7,11 @@ const UseEffectBasics = () => {
   const countHandler = () => {
     setValue(value + 1);
   };
+
   useEffect(() => {
-    document.title = `New Messages(${value})`;
+    if (value > 0) {
+      document.title = `New Messages (${value})`;
+    }
   });
   return (
     <div>
