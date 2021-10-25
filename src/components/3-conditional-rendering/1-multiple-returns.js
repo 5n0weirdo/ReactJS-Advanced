@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-const url = "https://api.github.com/users/QuincyLarson";
+const url = "https://api.github.com/users/QuincyLavrson";
 const MultipleReturns = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   const [isError, setIsError] = useState(false);
 
@@ -9,7 +9,15 @@ const MultipleReturns = () => {
 
   useEffect(() => {
     fetch(url)
-      .then((response) => response.json())
+      .then((response) => {
+        if (response.status >= 200 && response.status <= 299) {
+          return response.json();
+        } else {
+          setIsLoading(false);
+          setIsError(true);
+          throw new Error(response.statusText);
+        }
+      })
       .then((user) => {
         const { login } = user;
         setUser(login);
