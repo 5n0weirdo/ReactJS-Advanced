@@ -1,7 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 const ShowHide = () => {
-  return <h2>show/hide</h2>;
+  const [show, setShow] = useState(false);
+
+  const handleToggle = () => {
+    setShow(!show);
+  };
+  return (
+    <div>
+      <button className="btn" onClick={handleToggle}>
+        Show/Hide
+      </button>
+    </div>
+  );
 };
 
 export default ShowHide;
