@@ -1,13 +1,12 @@
-import React from 'react';
-import Setup from "./components/1-useState/setup/5-useState-counter"
+import React from "react";
+import Setup from "./components/2-useEffect/1-useEffect-basics";
 
 function App() {
   return (
     <div className="container">
       <Setup />
     </div>
-
-  )
+  );
 }
 
-export default App
+export default App;
