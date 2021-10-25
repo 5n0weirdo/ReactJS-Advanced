@@ -7,7 +7,9 @@ const UseEffectBasics = () => {
   const countHandler = () => {
     setValue(value + 1);
   };
-  useEffect(() => {});
+  useEffect(() => {
+    document.title = `New Messages(${value})`;
+  });
   return (
     <div>
       <h1>{value}</h1>
