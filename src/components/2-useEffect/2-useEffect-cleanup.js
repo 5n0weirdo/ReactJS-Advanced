@@ -8,6 +8,7 @@ const UseEffectCleanup = () => {
   return (
     <div>
       <h1>Window</h1>
+      <h1>{size}PX</h1>
     </div>
   );
 };
