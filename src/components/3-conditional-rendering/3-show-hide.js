@@ -1,16 +1,37 @@
 import React, { useState, useEffect } from "react";
+import styled from "styled-components";
 
 const ShowHide = () => {
   const [show, setShow] = useState(false);
 
-  const handleToggle = () => {
-    setShow(!show);
-  };
   return (
     <div>
-      <button className="btn" onClick={handleToggle}>
+      <button className="btn" onClick={() => setShow(!show)}>
         Show/Hide
       </button>
+      {show && <Item />}
+    </div>
+  );
+};
+
+const Item = () => {
+  const [size, setSize] = useState(window.innerWidth);
+
+  const checkSize = () => {
+    setSize(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", checkSize);
+    return () => {
+      window.removeEventListener("resize", checkSize);
+    };
+  }, []);
+
+  return (
+    <div style={{ marginTop: "2rem" }}>
+      <h1>Window</h1>
+      <h2>Size: {size} px</h2>
     </div>
   );
 };
