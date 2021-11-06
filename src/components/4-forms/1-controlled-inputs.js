@@ -18,6 +18,7 @@ const ControlledInputs = () => {
             <label htmlFor="email">Email: </label>
             <input type="text" id="email" name="email" />
           </div>
+          <button type="submit">Add person</button>
         </form>
       </article>
     </div>
