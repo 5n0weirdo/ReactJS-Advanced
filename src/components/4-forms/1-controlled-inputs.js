@@ -10,7 +10,11 @@ const ControlledInputs = () => {
 
     if (firstName && email) {
       const person = { firstName, email };
-      console.log(person);
+      setPeople((people) => {
+        return [...people, person];
+      });
+      setFirstName("");
+      setEmail("");
     } else {
       console.log("empty");
     }
@@ -42,6 +46,15 @@ const ControlledInputs = () => {
           </div>
           <button type="submit">Add person</button>
         </form>
+        {people.map((person) => {
+          const { id, firstName, email } = person;
+          return (
+            <div className="item">
+              <h4>{firstName}</h4>
+              <p>{email}</p>
+            </div>
+          );
+        })}
       </article>
     </div>
   );
