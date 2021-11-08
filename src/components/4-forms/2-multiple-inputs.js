@@ -7,7 +7,11 @@ const ControlledInputs = () => {
   const [person, setPerson] = useState({ firstName: "", email: "", age: "" });
   const [people, setPeople] = useState([]);
 
-  const handleChange = (e) => {};
+  const handleChange = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setPerson({ ...person, [name]: value });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
