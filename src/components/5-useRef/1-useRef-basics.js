@@ -5,7 +5,15 @@ import React, { useEffect, useRef } from "react";
 // target DOM nodes/elements
 
 const UseRefBasics = () => {
-  return <h2>useRef</h2>;
+  return (
+    <div>
+      <form action="" className="form">
+        <div>
+          <input type="text" />
+        </div>
+      </form>
+    </div>
+  );
 };
 
 export default UseRefBasics;
